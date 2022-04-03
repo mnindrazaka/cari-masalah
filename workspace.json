@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "client-mobile": "apps/client-mobile",
+    "client-mobile-e2e": "packages/client-mobile-e2e"
+  }
 }

@@ -5,19 +5,16 @@
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/react-native"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "ZjIyNjdkNzktOWNiZS00ODg1LThlZWQtMTg1MDcwZjJhZTI3fHJlYWQtd3JpdGU="
       }
     }
-  }
+  },
+  "defaultProject": "client-mobile"
 }
