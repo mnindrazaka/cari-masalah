@@ -70,6 +70,31 @@
         "jestConfig": "apps/client-mobile/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "storybook": {
+      "executor": "@nrwl/react-native:storybook",
+      "options": {
+        "searchDir": "apps/client-mobile",
+        "outputFile": "./.storybook/story-loader.js",
+        "pattern": "**/*.stories.@(js|jsx|ts|tsx|md)",
+        "silent": false
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "dist/storybook/client-mobile",
+        "config": {
+          "configFolder": "apps/client-mobile/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
     }
   },
   "tags": []
